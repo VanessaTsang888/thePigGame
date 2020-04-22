@@ -1,0 +1,51 @@
+<!-- HTML is the content of a webpage -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <!-- The header is what contains addition info about a webpage, such as the title, or some page keywords.-->
+    <head>
+        <meta charset="UTF-8">
+        <!-- import custom font from Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <!-- Import icon font which will give us some nice icons that we can use to make our interface look nicer -->
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <!-- We connect our HTML file to our CSS syle sheet -->
+        <link type="text/css" rel="stylesheet" href="style.css">
+        
+        <title>Pig Game</title>
+    </head>
+<!-- The body contains the visible content of a webpage -->
+    <body>
+        <div class="wrapper clearfix">
+            <!-- The activePlayer textContent in bold and with red dot. -->
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <!-- 51: IMPLEMENTING OUR 'HOLD' FUNCTION AND THE DRY (don't repeat yourself) PRINCIPLE:
+                We write our data here to update our UI -->
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <!-- JS: event listener -->
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            
+            <img src="dice-5.png" alt="Dice" class="dice">
+        </div>
+        
+        <script src="app.js"></script>
+    </body>
+</html>
